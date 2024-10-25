@@ -23,7 +23,6 @@ form.addEventListener("submit", function(e) {
     .then(() => {
       // alert("Successfully Submitted!");
       // location.reload();
-      var answer = confirm ("Successfully Registered!!!");
       regBTN.innerHTML="Register"
 
       let name = firstname.value;
@@ -33,13 +32,10 @@ form.addEventListener("submit", function(e) {
 
       let school = document.getElementById("schoolSelect").value;
 
-      
-
-      console.log(school);
-      console.log(name);
       print_label(0, name, school);
 
-      if (answer) location.reload();
+      alert("Successfully Registered!!!");
+      location.reload();
     })
     .catch((error) => {
       alert("Submission Failed, please try again.\n"+error);

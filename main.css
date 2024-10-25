@@ -509,3 +509,29 @@ footer img {
   button{
     margin-top: 3%;
   }
+
+  #devMode {    
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .labelInputPair * {
+    display: inline;
+  }
+
+  .labelInputPair input {
+    margin-left: 2em;
+  }
+
+  .labelInputPair {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }

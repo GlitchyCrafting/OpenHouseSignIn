@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SICTC Open House Sign Up</title>
-    <meta name="description" content="Please provide your information">
-    <link href="favicon.png" rel="shortcut icon">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  </head>
-  <body>
-    <header>
-      <div class="header-top">
-          <img src="footerLogo.png" alt="Website Logo" class="center">
-          <h1>Open House Sign Up</h1>
-      </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SICTC Open House Sign Up</title>
+  <meta name="description" content="Please provide your information">
+  <link href="favicon.png" rel="shortcut icon">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-top">
+      <img src="footerLogo.png" alt="Website Logo" class="center">
+      <h1>Open House Sign Up</h1>
+    </div>
   </header>
-  <form id="submit-to-google-sheet" name="submit-to-google-sheet" method="POST" action="https://script.google.com/macros/s/AKfycbyU7mQmsHOV2vmas4kAHhQOcWk-aXAEELhVERDAvpXWea3WDgz_9txlxjOVDJVTKtgq/exec">
+  <div id="devMode">
+    <script src="devMode.js"></script>
+
+    <h1>Dev Mode</h1>
+
+    <div class="labelInputPair">
+      <label for="setupDataFile">Data File</label>
+      <input name="setupDataFile" type="file">
+    </div>
+
+    <button onclick="exitDevMode()">Exit</button>
+  </div>
+  <div id="userMode">
+    <form id="submit-to-google-sheet" name="submit-to-google-sheet" method="POST"
+      action="https://script.google.com/macros/s/AKfycbyU7mQmsHOV2vmas4kAHhQOcWk-aXAEELhVERDAvpXWea3WDgz_9txlxjOVDJVTKtgq/exec">
       <input name="personalEmail" type="email" placeholder="Personal Email" required>
       <input name="emailAddress" type="email" id="emailInput" placeholder="School Email" required>
       <input name="firstName" type="text" placeholder="First Name" id="FirstName" required>
       <input name="preferedName" type="text" placeholder="Prefered Name or Nickname" id="PrefName">
       <input name="lastName" type="text" placeholder="Last Name" id="LastName" required>
-      <select name="school"placeholder="School" id="schoolSelect" required>
+      <select name="school" placeholder="School" id="schoolSelect" required>
         <option disabled selected value>Select a School</option>
         <option value="AIS">AIS</option>
         <option value="Boonville">Boonville High School</option>
@@ -59,28 +75,29 @@
         <label for="counselor"></label>
 
         <input type="checkbox" id="Informational Posters" name="where" value="posters"> Informational Posters
-        <label for="posters"></label> 
+        <label for="posters"></label>
 
         <input type="checkbox" id="Facebook" name="where" value="facebook"> Facebook
         <label for="facebook"></label>
 
         <input type="checkbox" id="Instagram" name="where" value="instagram"> Instagram
-        <label for="instagram" ></label>
+        <label for="instagram"></label>
 
         <input type="checkbox" id="SICTC Website" name="where" value="website"> SICTC Website
-        <label for="website" ></label>
+        <label for="website"></label>
 
         <input type="checkbox" id="Friend or Family Member" name="where" value="relative"> Friend or Family Member
-        <label for="relative" ></label>
+        <label for="relative"></label>
 
         <input type="checkbox" id="SICTC Alumni" name="where" value="alumni"> SICTC Alumni
-        <label for="alumni" ></label>
+        <label for="alumni"></label>
 
         <input type="checkbox" id="Current SICTC Student" name="where" value="student"> Current SICTC Student
         <label for="student"></label>
 
-        <input type="checkbox" id="SICTC Meeting at High School" name="where" value="meeting"> SICTC Meeting at High School
-        <label for="meeting" ></label>
+        <input type="checkbox" id="SICTC Meeting at High School" name="where" value="meeting"> SICTC Meeting at High
+        School
+        <label for="meeting"></label>
 
         <div>
           <input type="checkbox" id="other" name="where" value="other"> Other
@@ -93,18 +110,20 @@
       <!-- <input type="hidden" name="id" value="=ROW("> -->
 
       <button type="submit" id="RegisterBTN">Register</button>
-     
-  </form>
-  <footer>
-    <a href="https://sictc.evscschools.com/"><img src="headerLogo.svg" alt="Footer Logo"></a> 
-    <p>Maintained & Built by SICTC<br>Computer Science Software Development</p></div>
-</footer>
+
+    </form>
+    <footer>
+      <a href="https://sictc.evscschools.com/"><img src="headerLogo.svg" alt="Footer Logo"></a>
+      <p>Maintained & Built by SICTC<br>Computer Science Software Development</p>
+  </div>
+  </footer>
+
+  </div>
 </body>
 
-<script src="script.js"></script> 
+<script src="script.js"></script>
 <script src="https://qajavascriptsdktests.azurewebsites.net/JavaScript/dymo.connect.framework.js"
   type="text/javascript"></script>
 <script src="printer.js" type="text/javascript"></script>
 
 </html>
-
